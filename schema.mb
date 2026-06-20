@@ -23,7 +23,7 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 - id
 - nome_dipartimento
 
-## Tabella corso di laurea
+## Tabella corsi di laurea
 - id
 - id_dipartimento
 - nome_corso_laurea
@@ -33,7 +33,7 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 - id_corso_laurea
 - nome_corso
 
-## Tabella insegnamento
+## Tabella ponte corsi - insegnatni
 - id_corso
 - id_insegnante 
 
