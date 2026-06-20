@@ -20,47 +20,47 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 - studenti
 
 ## Tabella dipartimenti
-- id
+- id PK BIGINT NOT NULL UNIQUE AI INDEX
 - nome_dipartimento
 
 ## Tabella corsi di laurea
-- id
-- id_dipartimento
+- id PK BIGINT NOT NULL UNIQUE AI INDEX
+- id_dipartimento FK BIGINT NOT NULL 
 - nome_corso_laurea
 
 ## Tabella corso
-- id
-- id_corso_laurea
-- nome_corso
+- id PK BIGINT NOT NULL UNIQUE AI INDEX
+- id_corso_laurea FK BIGINT NOT NULL  
+- nome_corso VARCHAR (100) NOT NULL UNIQUE
 
 ## Tabella ponte corsi - insegnatni
-- id_corso
-- id_insegnante 
+- id_corso FK BIGINT NOT NULL
+- id_insegnante  FK BIGINT NOT NULL
 
 ## Tabella insegnanti
-- id
-- nome_insengnante
-- cognome_insengnante
-- età
-- titolo_studio
+- id PK BIGINT NOT NULL UNIQUE AI INDEX
+- nome_insengnante VARCHAR (100) NOT NULL
+- cognome_insengnante VARCHAR (100) NOT NULL
+- età SMALLINT NOT NULL INDEX
+- titolo_studio VARCHAR (100) NOT NULL
 
 ## Tabella appelli
-- id
-- id_corso
-- data_appello
-- tipo_appello
+- id PK BIGINT NOT NULL UNIQUE AI INDEX
+- id_corso FK BIGINT NOT NULL
+- data_appello DATETIME NOT NULL
+- tipo_appello VARCHAR (100) NOT NULL
 
 ## Tabella ponte studente-appelli
-- id_appello
-- id_studente
-- voto 
+- id_appello FK BIGINT NOT NULL
+- id_studente FK BIGINT NOT NULL
+- voto SMALLINT NOT NULL
 
 ## Tabella studenti
-- id
-- id_corso_laurea
-- nome_studente
-- cognome_studente
-- anno_corso
-- matricola
+- id PK BIGINT NOT NULL UNIQUE AI INDEX
+- id_corso_laurea FK BIGINT NOT NULL
+- nome_studente VARCHAR (100) NOT NULL
+- cognome_studente VARCHAR (100) NOT NULL
+- anno_corso DATETIME NOT NULL
+- matricola SMALLINT NOT NULL INDEX
 
 
